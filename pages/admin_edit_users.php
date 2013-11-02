@@ -1,0 +1,4 @@
+<?php
+isadmin();
+echo "doodoo";
+?>

@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+* Various functions that do not require an object
+*
+* @since 1.0
+*
+*/
+
+/**
+* Create a link
+*
+* Generates a link based on two inputs.
+*
+* @package generators
+*
+*/
+	function newlink($content,$url) {
+		echo &quot;&lt;a href='&quot;.$url.&quot;'&gt;&quot;;
+		echo $content;
+		echo &quot;&lt;/a&gt;&quot;;
+	}
+/**
+* Display the login form
+*
+* @package security
+* @subpackage security\interfaces\forms
+*
+*/
+	function loginform() {
+		include('pages/login.php');
+	}
+
+/**
+* Check for admin
+*
+* Compares $loggedin and $userlevel to determine whether user has elevated priveleges
+*
+* @package security
+* @subpackage functions\checks
+*
+* @version 2.0
+*
+*/
+	function isadmin() {
+	global $admin, $loggedin, $siteowner, $userlevel;
+		if ($loggedin != &quot;1&quot; &amp;&amp; $userlevel &lt; &quot;3&quot;) {
+			echo &quot;&lt;div class='alert alert-danger'&gt;&quot;;
+			echo &quot;Sorry, you do not have access to this page.&lt;/div&gt;&quot;;
+			include(&quot;templates/footer.php&quot;);
+			die();
+		}
+}
+
+
+/**
+* User login checker
+*
+*/
+	function isloggedin() {
+	global $loggedin, $siteowner;
+		if ($loggedin != &quot;1&quot;) {
+			echo &quot;&lt;div class='alert alert-danger'&gt;&quot;;
+			echo &quot;Please sign in or register.&lt;/div&gt;&quot;;
+			include(&quot;templates/footer.php&quot;);
+			die();
+		}
+}
+/* END SECURITY FUNCTIONS */
+
+?&gt;
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all()
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

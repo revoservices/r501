@@ -1,0 +1,24 @@
+		
+
+#######################################
+Getter functions for class altpanel
+#######################################
+		function get_size() {
+			return $this->size;
+		}
+		function get_type() {
+			return $this->type;
+		}
+		function get_title() {
+			return $this->title;
+		}
+		function get_lead() {
+			return $this->lead;
+		}
+		function get_content() {
+			return $this->content;
+		}
+		function get_footer() {
+			return $this->footer;
+		}
+#######################################

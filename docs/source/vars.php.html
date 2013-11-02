@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+
+$options = $mysqli-&gt;query(&quot;SELECT * FROM `site_options`&quot;);
+	while ($option = $options-&gt;fetch_assoc())
+	{
+		$opt[$option['optname']] = $option['optval'];
+	}
+
+//PREFERENCES
+
+$sitename = $opt['sitename'];
+$sitetag = $opt['sitetag'];
+$siteowner = $opt['siteowner'];
+$siteurl = $opt['siteurl'];
+$sitelogofile = $opt['sitelogo'];
+$sitelogo = &quot;&lt;img src='&quot;.$sitelogofile.&quot;'&gt;&quot;;
+$sitetitle = $sitename.&quot; - &quot;.$sitetag;
+
+//UTILITY MODES
+$maint_mode = $opt['maint_mode'];
+$reg_open = $opt['reg_open'];
+
+?&gt;
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all()
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

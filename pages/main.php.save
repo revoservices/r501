@@ -1,0 +1,29 @@
+<div class="col-6 col-lg-6">
+<?php
+//blogposts();
+//$bp = $p;
+//print_r($bp);
+        $sql = "SELECT * FROM `posts` WHERE `posts`.`post_vis` <= '$userlevel' order by `posts`.`postID` DESC";
+        $stmt = $mysqli->query($sql);
+        $p = array();
+        while ($posts = $stmt->fetch_assoc()) {
+		$title = $posts['post_title'];
+		$body = $posts['post_body'];
+                $pic = $posts['post_pic'];
+		$post = new altpanel();
+		$post->set_type("primary");
+		$post->set_size("12");
+		$post->set_title($title);
+		$post->set_content($body."<img src='".$pic."'>");
+		$post->makepanel();
+        }
+?>
+</div>
+<div class="col-6 col-lg-6">
+<div class="panel panel-success">
+<div class="panel-heading">
+<h3 class="panel-title">Test</h3>
+</div><div class="panel-body">
+Stupid Flanders<Br>Screw Flanders
+</div></div>
+</div>
