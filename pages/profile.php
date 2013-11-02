@@ -14,9 +14,9 @@ $e->showalert();
 $usrs = $mysqli->query("SELECT
  `users`.`userid`,
  `users`.`username`,
+ `users`.`email`,
  `user_data`.`userid`,
  `user_data`.`name`,
- `user_data`.`email`,
  `user_data`.`location`,
  `user_data`.`dob`,
  `user_data`.`userpic`
