@@ -25,6 +25,8 @@ $formLegend = "Form Name";
 beginForm($formAction,$formMethod,$formLegend);
 ```
 
+---
+
 ##### Define inputs:
 
 For each input group, define a new `formGroup`.
@@ -54,6 +56,8 @@ $demo = new Formgroup();
 ```php
 $demo->renderGroup();
 ```
+
+---
 
 ##### Close the form:
 
