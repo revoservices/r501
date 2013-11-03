@@ -19,7 +19,7 @@ Bootstrap-based website framework.
 5. Visit your site and log in as "admin" with the password "password".
 6. Change the administrator account password immediately!
 
-### Features
+## Features
 
 ##### Security
 * [User Levels Explained](#)

@@ -3,7 +3,7 @@
 
 Bootstrap-based website framework.
 
-### Requirements
+## Requirements
 
 * PHP5.3+ (Preferably 5.4+)
 * MySQL 5.3+
@@ -11,7 +11,7 @@ Bootstrap-based website framework.
 * Apache or other rewrite-capable web server
 
 
-### Installation
+## Installation
 1. Clone the `master` branch of the GitHub repo.
 2. Import `/cfg/database.sql`.
 3. Modify `/cfg/dbc.php` with your database details.
@@ -19,22 +19,22 @@ Bootstrap-based website framework.
 5. Visit your site and log in as "admin" with the password "password".
 6. Change the administrator account password immediately!
 
-### Features
+## Features
 
-##### Security
+#### Security
 * [User Levels Explained](#)
 * [Checking user level and status](#)
 
-##### User Interface
+#### User Interface
 * [Forms](../FORMS)
 * [Alerts](../ALERTS)
 * [Panels](#)
 * [Links](#)
 * [Buttons](#)
 
-### Boring Stuff
-* [License](LICENSE)
+## Boring Stuff
+* [License](../LICENSE)
 
-### Author
+## Author
 
 * Jeff Brown <jbrown@candojax.org>

@@ -1,7 +1,7 @@
 
 # Forms
 
-##### Set up the form:
+### Set up the form:
 
 Begin a form by calling the function `beginForm()`.
 
@@ -27,7 +27,7 @@ beginForm($formAction,$formMethod,$formLegend);
 
 ---
 
-##### Define inputs:
+### Define inputs:
 
 For each input group, define a new `formGroup`.
 
@@ -53,13 +53,13 @@ $demo = new Formgroup();
 
 ---
 
-##### Render the input group:
+### Render the input group:
 ```php
 $demo->renderGroup();
 ```
 
 ---
 
-##### Close the form:
+### Close the form:
 
 Simply call the function `endForm();` to end the form.
