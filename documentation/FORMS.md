@@ -48,7 +48,7 @@ $demo = new Formgroup();
 ###### Defaults:
 - `labelsize`: 3
 - `inputsize`: 9
-..* These two values must always add up to 12.
+... These two values must always add up to 12.
 - `required`: 0 (false)
 
 ---
