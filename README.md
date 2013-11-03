@@ -41,4 +41,4 @@ $demo->renderGroup
 
 ##### Close the form:
 
-Simply call the function `endForm()` to end the form.
+Simply call the function ```php endForm()``` to end the form.
