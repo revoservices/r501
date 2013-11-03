@@ -12,3 +12,4 @@ Alerts are very simple to use. Only two parameters need to be passed.
 ```php
 $myAlert = new alert($type,$content);
 $myAlert->showalert();
+```
