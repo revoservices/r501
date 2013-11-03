@@ -43,11 +43,18 @@ $demo = new Formgroup();
 		$demo->checked = "1";
 ```
 
-And render it:
+###### Defaults:
+- `labelsize`: 3
+- `inputsize`: 9
+- `required`: 0 (false)
+
+---
+
+##### Render the input group:
 ```php
-$demo->renderGroup
+$demo->renderGroup();
 ```
 
 ##### Close the form:
 
-Simply call the function `endForm()` to end the form.
+Simply call the function `endForm();` to end the form.
