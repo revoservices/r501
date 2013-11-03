@@ -138,6 +138,13 @@ echo ">";
   </div>
 </div>
 
+<?php
+/*
+$demo = new Formgroup("so much class","3","text","wow","lost","so code","9","1","much types");
+$demo->render();
+*/
+?>
+
 </fieldset>
 </form>
 

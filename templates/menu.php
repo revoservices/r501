@@ -76,8 +76,7 @@ if($canlogin == "1") {
 
 	}
 }
-$toplevel->close();
-$childs->close();
+
 ?>
 </div>
 
