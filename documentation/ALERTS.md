@@ -1,5 +1,6 @@
-Alerts
-######
+
+# Alerts
+
 
 Alerts are very simple to use. Only two parameters need to be passed.
 * `$type`: primary, success, danger, warning
