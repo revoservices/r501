@@ -29,7 +29,8 @@ Bootstrap-based website framework.
 * [Forms](documentation/FORMS.md)
 * [Alerts](documentation/ALERTS.md)
 * [Panels](#)
-* [
+* [Links](#)
+* [Buttons](#)
 
 ### Boring Stuff
 * [License](LICENSE)
