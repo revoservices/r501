@@ -15,6 +15,18 @@ This function has three parameters:
 + `$method`, method to send data.
 
 + `$legend`, a title for the form. (optional)
+ 
+###### Examples
+```php
+beginForm("process_page","POST","Form Name");
+```
+
+```php
+$formAction = "process_page";
+$formMethod = "POST";
+$formLegend = "Form Name";
+beginForm($formAction,$formMethod,$formLegend);
+```
 
 ##### Define inputs:
 
@@ -41,4 +53,4 @@ $demo->renderGroup
 
 ##### Close the form:
 
-Simply call the function ```php endForm()``` to end the form.
+Simply call the function `endForm()` to end the form.
