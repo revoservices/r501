@@ -21,11 +21,11 @@ Bootstrap-based website framework.
 
 ### Features
 
-#### Security
+##### Security
 * [User Levels Explained](#)
 * [Checking user level and status](#)
 
-#### User Interface
+##### User Interface
 * [Forms](documentation/FORMS.md)
 * [Alerts](documentation/ALERTS.md)
 * [Panels](#)
