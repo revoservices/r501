@@ -139,10 +139,20 @@ echo ">";
 </div>
 
 <?php
-/*
-$demo = new Formgroup("so much class","3","text","wow","lost","so code","9","1","much types");
-$demo->render();
-*/
+
+$demo = new Formgroup();
+		$demo->label = "so much class";
+		$demo->labelsize = "3";
+		$demo->type = "text";
+		$demo->id = "wow";
+		$demo->name = "lost";
+		$demo->value = "so code";
+		$demo->inputsize = "9";
+		$demo->required = "1";
+		$demo->placeholder = "much type";
+		$demo->checked = "1";
+$demo->renderGroup();
+
 ?>
 
 </fieldset>

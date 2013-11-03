@@ -1,5 +1,11 @@
 <?php 
-
+/**
+*
+* Image Serving Script
+*
+* Usage: <img src="{domain}/images/{category}/{id}">
+*
+*/
 include('../cfg/dbc.php');
 function blogimg($postid) {
 	global $mysqli;

@@ -1,4 +1,5 @@
 <?php
+require_once('cfg/lib/func_forms.php');
 /**
 * Various functions that do not require an object
 *

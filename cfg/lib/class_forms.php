@@ -39,8 +39,7 @@ class Formgroup {
 		$this->placeholder = $placeholder;
 		$this->checked = $checked;
 	}
-
-	function render() {
+	function renderGroup() {
 		echo "<div class='form-group'>";
  		echo "<label class='col-".$this->labelsize." col-lg-".$this->labelsize." control-label' for='".$this->name."'>";
 		echo $this->label."</label>";  
