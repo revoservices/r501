@@ -13,8 +13,8 @@ Bootstrap-based website framework.
 
 ### Installation
 1. Clone the `master` branch of the GitHub repo.
-2. Import /cfg/database.sql.
-3. Modify /cfg/dbc.php with your database details.
+2. Import `/cfg/database.sql`.
+3. Modify `/cfg/dbc.php` with your database details.
 4. [Server Configuration](documentation/SERVER.md)
 5. Visit your site and log in as "admin" with the password "password".
 6. Change the administrator account password immediately!
