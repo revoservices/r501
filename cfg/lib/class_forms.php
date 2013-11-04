@@ -41,10 +41,19 @@ class Formgroup {
 	}
 	function renderGroup() {
 		echo "<div class='form-group'>";
- 		echo "<label class='col-".$this->labelsize." col-lg-".$this->labelsize." control-label' for='".$this->name."'>";
+ 		echo "<label class='col-md-".$this->labelsize." control-label' for='".$this->name."'>";
 		echo $this->label."</label>";  
  		echo "<div class='col-md-".$this->inputsize."'>";
-  		echo "<input id='".$this->id."' name='".$this->name."' type='".$this->type."' placeholder='".$this->placeholder."' value='".$this->value."' class='form-control input-md' required=''>";
+  		$input  = "<input id='".$this->id."' name='".$this->name."' type='".$this->type."'";
+		if ($this->required == "1") {
+			$input .= " required";
+		}
+		switch ($this->type) {
+			case "text":
+				$input .= " placeholder='".$this->placeholder."' value='".$this->value."' class='form-control input-md'>";
+				break;
+		}
+		print $input;
    		 echo "</div></div>";	
 	}
 }

@@ -1,35 +1,47 @@
-<form class="form-horizontal" method="post" action="../suadmin_options/">
-<fieldset>
 
-<!-- Form Name -->
-<legend>Site Configuration</legend>
+<?php
+$formAction = "../suadmin_options/";
+$formMethod = "POST";
+$formLegend = "Site Configuration";
+beginForm($formAction,$formMethod,$formLegend);
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="sitename">Site Name</label>  
-  <div class="col-md-5">
-  <input id="sitename" name="sitename" type="text" placeholder="Name of Your Site" value="<?php echo $opt['sitename']; ?>" class="form-control input-md" required="">
-    
-  </div>
-</div>
+$sname = new formGroup();
+		$sname->label = "Site Name";
+		$sname->labelsize = "4";
+		$sname->type = "text";
+		$sname->id = "sitename";
+		$sname->name = "sitename";
+		$sname->value = $opt['sitename'];
+		$sname->inputsize = "5";
+		$sname->required = "1";
+		$sname->placeholder = "Name of Your Site";
+$sname->renderGroup();
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="tagline">Tagline</label>  
-  <div class="col-md-5">
-  <input id="tagline" name="tagline" type="text" placeholder="A catchy slogan" value="<?php echo $opt['sitetag']; ?>" class="form-control input-md" required="">
-    
-  </div>
-</div>
+$tag = new formGroup();
+		$tag->label = "Tagline";
+		$tag->labelsize = "4";
+		$tag->type = "text";
+		$tag->id = "tagline";
+		$tag->name = "tagline";
+		$tag->value = $opt['sitetag'];
+		$tag->inputsize = "5";
+		$tag->required = "1";
+		$tag->placeholder = "A catchy slogan";
+$tag->renderGroup();
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="owner">Owner</label>  
-  <div class="col-md-5">
-  <input id="owner" name="owner" type="text" placeholder="Your name or company" value="<?php echo $opt['siteowner']; ?>" class="form-control input-md" required="">
-    
-  </div>
-</div>
+$sowner = new formGroup();
+		$sowner->label = "Owner";
+		$sowner->labelsize = "4";
+		$sowner->type = "text";
+		$sowner->id = "owner";
+		$sowner->name = "owner";
+		$sowner->value = $opt['siteowner'];
+		$sowner->inputsize = "5";
+		$sowner->required = "1";
+		$sowner->placeholder = "Your name or company";
+$sowner->renderGroup();
+
+?>
 
 <!-- Text input-->
 <div class="form-group">
@@ -137,24 +149,6 @@ echo ">";
     <button id="updateprefs" name="updateprefs" class="btn btn-primary">Submit</button>
   </div>
 </div>
-
 <?php
-
-$demo = new Formgroup();
-		$demo->label = "so much class";
-		$demo->labelsize = "3";
-		$demo->type = "text";
-		$demo->id = "wow";
-		$demo->name = "lost";
-		$demo->value = "so code";
-		$demo->inputsize = "9";
-		$demo->required = "1";
-		$demo->placeholder = "much type";
-		$demo->checked = "1";
-$demo->renderGroup();
-
+endForm();
 ?>
-
-</fieldset>
-</form>
-

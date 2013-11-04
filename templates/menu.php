@@ -66,7 +66,7 @@ echo "</ul>";
 
 } //foreach toplevel
 if($canlogin == "1") {
-	if($loggedin == "1") {
+	if($_SESSION['loggedin'] == "1") {
 		echo "<p class='navbar-text pull-right'>";
 		echo "Signed in as ".$myname;
 		echo "</p>";
