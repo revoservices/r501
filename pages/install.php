@@ -58,6 +58,9 @@ $dbs = $_POST['dbsrv'];
 $dbu = $_POST['dbusr'];
 $dbp = $_POST['dbpass'];
 $dbt = $_POST['dbname'];
+$admin = $_POST['admin'];
+$adminmail = $_POST['adminmail'];
+$adminpass = md5($_POST['adminpass']);
 
 $installconn = new mysqli($dbs, $dbu, $dbp, $dbt);
 $dberr = $failglyph."Failed to connect to MySQL: (".$installconn->connect_errno.")".$installconn->connect_error;

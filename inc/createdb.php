@@ -269,10 +269,25 @@ if(!$install) {
 else {
 	$crtpass = new alert("success",$poppass.$name);
 	$crtpass->showalert();
+}
+
+$populate_users = "INSERT INTO `users` (`userid`, `username`, `email`, `userpass`, `userlevel`) VALUES";
+$populate_users .= "(1, '$admin', '$adminmail', '$adminpass', 4); ";
+$install = $installconn->query($populate_users);
+$name = "admin account'";
+
+if(!$install) {
+	$crtfail = new alert("danger",$poperr.$name);
+	$crtfail->showalert();
+}
+else {
+	$crtpass = new alert("success",$poppass.$name);
+	$crtpass->showalert();
 	$dbmade = "1";
 
 }
-$dbcfile = 'cfg/test.php';
+
+$dbcfile = 'cfg/dbc.php';
 $handle = fopen($dbcfile, 'w') or die('Cannot open file:  '.$dbcfile); //implicitly creates file
 $dbc_open = '<?php';
 fwrite($handle, $dbc_open);

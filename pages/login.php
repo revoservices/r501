@@ -22,7 +22,7 @@ $users = $mysqli->query("SELECT * FROM `users`
 	} else {
 		$_SESSION['loggedin'] = "1";
 		//echo "<div class='alert alert-success'>Welcome back!</div>";
-		echo '<script> window.location="../main"; </script> ';
+		echo '<script> window.location="../../page/main"; </script> ';
 	}
 	$users->close();
 

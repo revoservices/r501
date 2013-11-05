@@ -5,7 +5,7 @@ include("templates/header.php");
 // Set the default name 
 $action = 'main'; 
 // Specify some disallowed paths 
-$disallowed_paths = array('header', 'footer'); 
+$disallowed_paths = array('header', 'footer', 'install'); 
 if (!empty($_GET['view'])) { 
     $tmp_action = basename($_GET['view']); 
     // If it's not a disallowed path, and if the file exists, update $action 

@@ -15,4 +15,9 @@
 	function startlink($address) {
 		echo "<a href='".$siteurl."/page/".$address."'>";
 	}
+	function extlink($title,$address) {
+		echo "<a href='".$address."'>";
+		echo $title;
+		echo "</a>";
+	}
 ?>

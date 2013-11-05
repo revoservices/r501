@@ -1,7 +1,7 @@
 <?php
 $formAction = "../install";
 $formMethod = "POST";
-$formLegend = "Database Credentials";
+$formLegend = "Installation Options";
 beginForm($formAction,$formMethod,$formLegend);
 
 $dbserver = new formGroup();
@@ -49,6 +49,39 @@ $dbase = new formGroup();
 		$dbase->value = "iptv";
 		$dbase->placeholder = "Name of database";
 $dbase->renderGroup();
+
+$newadmin = new formGroup();
+		$newadmin->label = "Admin Username";
+		$newadmin->labelsize = "4";
+		$newadmin->type = "text";
+		$newadmin->id = "admin";
+		$newadmin->name = "admin";
+		$newadmin->inputsize = "5";
+		$newadmin->required = "1";
+		$newadmin->placeholder = "Create a username";
+$newadmin->renderGroup();
+
+$newadminmail = new formGroup();
+		$newadminmail->label = "Admin Email";
+		$newadminmail->labelsize = "4";
+		$newadminmail->type = "text";
+		$newadminmail->id = "adminmail";
+		$newadminmail->name = "adminmail";
+		$newadminmail->inputsize = "5";
+		$newadminmail->required = "1";
+		$newadminmail->placeholder = "Your email address";
+$newadminmail->renderGroup();
+
+$newadminpass = new formGroup();
+		$newadminpass->label = "Admin Password";
+		$newadminpass->labelsize = "4";
+		$newadminpass->type = "password";
+		$newadminpass->id = "adminpass";
+		$newadminpass->name = "adminpass";
+		$newadminpass->inputsize = "5";
+		$newadminpass->required = "1";
+		$newadminpass->placeholder = "Administrator Password";
+$newadminpass->renderGroup();
 
 $submit = new formGroup();
 

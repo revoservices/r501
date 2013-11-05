@@ -6,7 +6,7 @@
           <h4 class="modal-title">Login to <?php echo $sitename; ?></h4>
         </div>
         <div class="modal-body">
-  <form class="form-horizontal" action="../login/" method="post">
+  <form class="form-horizontal" action="../../page/login/" method="post">
 <div class="form-group">
                            <label class="col-lg-2 control-label">Username </label>
 <div class="col-10 col-lg-10">
