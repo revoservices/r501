@@ -1,3 +1,6 @@
+<div class="container">
+<p class="lead">Checking Requirements</p>
+
 <?php
 //Required PHP version and success/error messages
 $phpreq = "5.3.9";
@@ -16,42 +19,52 @@ if (!isset($_POST['submit'])) {
 //Check versions and extensions
 if ($phpversion > $phpreq) {
 	$reqspassed = "1";
-	$passphp = new alert("success",$phpsuccess);
-	$passphp->showalert();
+	makelabel("success",$phpsuccess);
+	//$passphp = new alert("success",$phpsuccess);
+	//$passphp->showalert();
 }
 else {
 	$reqspassed = "0";
-	$failphp = new alert("danger",$phpfailerr);
-	$failphp->showalert();
+	makelabel("danger",$phpfailerr);
+	//$failphp = new alert("danger",$phpfailerr);
+	//$failphp->showalert();
 }
 
 if (extension_loaded('mysqli')) {
 	if ($reqspassed != "0") {
 	$reqspassed = "1";
 	}
-	$passmysqli = new alert("success",$mysqlipass);
-	$passmysqli->showalert();
+	makelabel("success",$mysqlipass);
+	//$passmysqli = new alert("success",$mysqlipass);
+	//$passmysqli->showalert();
 }
 else {
 	$reqspassed = "0";
-	$failmysqli = new alert("danger",$mysqlierr);
-	$failmysqli->showalert();
+	makelabel("danger",$mysqlierr);
+	//$failmysqli = new alert("danger",$mysqlierr);
+	//$failmysqli->showalert();
 }
 
 if (extension_loaded('pdo')) {
 	if ($reqspassed != "0") {
 	$reqspassed = "1";
 	}
-	$passpdo = new alert("success",$pdopass);
-	$passpdo->showalert();
+	makelabel("success",$pdopass);
+	//$passpdo = new alert("success",$pdopass);
+	//$passpdo->showalert();
 }
 else {
 	$reqspassed = "0";
-	$failpdo = new alert("danger",$pdoerr);
-	$failpdo->showalert();
+	makelabel("danger",$pdoerr);
+	//$failpdo = new alert("danger",$pdoerr);
+	//$failpdo->showalert();
 }
 
 } //End if $submit not set
+?>
+</div>
+<hr>
+<?php
 
 if (isset($_POST['submit'])) {
 $dbs = $_POST['dbsrv'];
@@ -87,12 +100,14 @@ if($reqspassed == "1") {
 include('templates/forms/install_db.php');
 }
 if($dbmade == "1") {
-$done = "All configuration complete! Now deleting install files for security purposes.";
+$done = "All configuration complete! Now deactivating install files for security purposes.";
 $installed = new alert("success",$done);
 $installed->showalert();
-$link = "../page/main";
+$link = "main";
 $linktext = "Click here to go to your new homepage and log in.";
 makelink($linktext,$link);
-unlink(install.php); 
+rename("install.php", "install.deactivated"); 
+rename("pages/install.php", "pages/install.deactivated"); 
+rename("templates/forms/install_db.php", "templates/forms/install_db.deactivated"); 
 }
 ?>

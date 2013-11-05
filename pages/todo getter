@@ -1,0 +1,54 @@
+	public function get_label() {
+		$this->label = $label;
+	}
+
+	public function get_labelsize() {
+		$this->labelsize = $labelsize;
+	}
+
+	public function get_type() {
+		$this->type = $type;
+	}
+
+	public function get_style() {
+		$this->style = $style;
+	}
+
+	public function get_id($) {
+		$this->id = $id;
+	}
+
+	public function get_name() {
+		$this->name = $name;
+	}
+
+	public function get_inputsize() {
+		$this->inputsize = $inputsize;
+	}
+
+	public function get_required() {
+		$this->required = $required;
+	}
+
+	public function get_placeholder() {
+		$this->placeholder = $placeholder;
+	}
+
+	public function get_value() {
+		$this->value = $value;
+	}
+
+	public function get_checked() {
+		$this->checked = $checked;
+	}
+
+	public function get_action() {
+		$this->action = $action;
+	}
+
+	public function get_text() {
+		$this->text = $text;
+	}
+
+
+

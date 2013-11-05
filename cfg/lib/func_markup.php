@@ -22,4 +22,10 @@
 		echo $title;
 		echo "</a>";
 	}
+	function makelabel($type,$text) {
+		echo "<br><span class='label label-".$type."'>".$text."</span><br>";
+	}
+	function inlinelabel($type,$text) {
+		echo "<span class='label label-".$type."'><h3>".$text."</h3></span>";
+	}
 ?>
