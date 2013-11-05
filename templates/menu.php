@@ -22,7 +22,8 @@ $i = "1";
 switch ($mclass) {
 	case "bar";
 		echo "<li>";
-		echo "<a href='".$ch['mitem_dest']."'>";
+		$dest = $ch['mitem_dest'];
+		startlink($dest);
 		echo "<span class='glyphicon glyphicon-".$ch['mitem_glyph']."'></span> ";
 		echo $ch['mitem_name']."</a></li>";
 	break;
@@ -50,7 +51,8 @@ switch ($mclass) {
 		 //create linked item...
 		else {
 			echo "<li role='presentation' class='".$mc."'>";
-			echo "<a href='".$itm['mitem_dest']."'>".$itm['mitem_name']."</a></li>";
+			makelink($itm['mitem_name'],$itm['mitem_dest']);
+			//echo "<a href='".$itm['mitem_dest']."'>".$itm['mitem_name']."</a></li>";
 		
 		} //if class is header or divider
 

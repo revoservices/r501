@@ -7,9 +7,12 @@
 * @package generators
 *
 */
-	function newlink($content,$url) {
-		echo "<a href='".$url."'>";
+	function makelink($content,$url) {
+		echo "<a href='".$siteurl."/page/".$url."'>";
 		echo $content;
 		echo "</a>";
+	}
+	function startlink($address) {
+		echo "<a href='".$siteurl."/page/".$address."'>";
 	}
 ?>
