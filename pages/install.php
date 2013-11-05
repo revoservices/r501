@@ -87,6 +87,12 @@ if($reqspassed == "1") {
 include('templates/forms/install_db.php');
 }
 if($dbmade == "1") {
-
+$done = "All configuration complete! Now deleting install files for security purposes.";
+$installed = new alert("success",$done);
+$installed->showalert();
+$link = "../page/main";
+$linktext = "Click here to go to your new homepage and log in.";
+makelink($linktext,$link);
+unlink(install.php); 
 }
 ?>

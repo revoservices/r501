@@ -7,6 +7,15 @@
 ?>
 <div class="container">
 <?php
+$cfgfile = 'cfg/dbc.php';
+$cfgexists = "r501 appears to be installed already. Please delete the configuration file to continue.";
+if (file_exists($cfgfile)) {
+	$cfgex = new alert("danger",$cfgexists);
+	$cfgex->showalert();
+ 
+} else {
 	include('pages/install.php');
+}
+
 ?>
 </div>
