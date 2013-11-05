@@ -30,7 +30,19 @@ class Formgroup {
 	var $action;
 	var $text;
 	
-	function __construct($label,$labelsize,$type,$style,$id,$name,$value,$inputsize,$required,$placeholder,$checked,$action,$text) {
+	function __construct($label = null, 
+ 		$labelsize = null, 
+ 		$type = null, 
+ 		$style = null, 
+ 		$id = null, 
+ 		$name = null, 
+ 		$value = null, 
+ 		$inputsize = null, 
+ 		$required = null, 
+ 		$placeholder = null, 
+ 		$checked = null, 
+ 		$action = null, 
+ 		$text = null) {
 		$this->label = $label;
 		$this->labelsize = $labelsize;
 		$this->type = $type;
@@ -60,16 +72,20 @@ class Formgroup {
 		echo $this->label."</label>";  
  		echo "<div class='col-md-".$this->inputsize."'>";
 
-		if ($this->required == "1") {
-			$input .= " required";
-		}
+
 		switch ($this->type) {
 			case "text":
   				$input  = "<input id='".$this->id."' name='".$this->name."' type='".$this->type."'";
+		if ($this->required == "1") {
+			$input .= " required";
+		}
 				$input .= " placeholder='".$this->placeholder."' value='".$this->value."' class='form-control input-md'>";
 				break;
 			case "password":
 				$input  = "<input id='".$this->id."' name='".$this->name."' type='".$this->type."'";
+		if ($this->required == "1") {
+			$input .= " required";
+		}
 				$input .= " placeholder='".$this->placeholder."' value='".$this->value."' class='form-control input-md'>";
 				break;
 			case "button":
