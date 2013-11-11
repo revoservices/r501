@@ -25,6 +25,7 @@ $dbuser = new formGroup();
 		$dbuser->inputsize = "5";
 		$dbuser->required = "1";
 		$dbuser->placeholder = "Username of MySQL User";
+		$dbuser->autocomplete = "off";
 $dbuser->renderGroup();
 
 $dbpw = new formGroup();
@@ -36,6 +37,7 @@ $dbpw = new formGroup();
 		$dbpw->inputsize = "5";
 		$dbpw->required = "1";
 		$dbpw->placeholder = "MySQL User Password";
+		$dbpw->autocomplete = "off";
 $dbpw->renderGroup();
 
 $dbase = new formGroup();

@@ -13,11 +13,12 @@ Bootstrap-based website framework.
 
 ### Installation
 1. Clone the `master` branch of the GitHub repo.
-2. Import `/cfg/database.sql`.
-3. Modify `/cfg/dbc.php` with your database details.
-4. [Server Configuration](documentation/SERVER.md)
-5. Visit your site and log in as "admin" with the password "password".
-6. Change the administrator account password immediately!
+2. Make sure the directory `/cfg` is writeable.
+3. Make sure `/install.php` is writeable.
+4. Configure your virtual host's Apache Rules. See [Server Configuration](documentation/SERVER.md)
+5. Run the web installer at `http://[yoursite.com]/[r501 directory]/install`.
+6. Visit your site and log with the account you set up during install.
+
 
 ## Features
 

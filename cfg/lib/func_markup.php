@@ -28,4 +28,7 @@
 	function inlinelabel($type,$text) {
 		echo "<span class='label label-".$type."'><h3>".$text."</h3></span>";
 	}
+	function image($cat,$id) {
+		echo "<img src='/images/".$cat."/".$id."/'>";
+		}
 ?>

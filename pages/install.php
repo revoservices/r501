@@ -14,7 +14,7 @@ $mysqlierr = $failglyph."The extension 'mysqli' does not appear to be loaded.";
 $mysqlipass = $passglyph."Success! Mysqli is loaded.";
 $pdoerr = $failglyph."The extension 'pdo' does not appear to be loaded.";
 $pdopass = $passglyph."Success! PDO is loaded.";
-
+$dbmade = "0";
 if (!isset($_POST['submit'])) {
 //Check versions and extensions
 if ($phpversion > $phpreq) {

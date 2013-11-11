@@ -7,6 +7,7 @@
 ?>
 </head><body>
 <div class="container">
+
 <?php
 $cfgfile = 'cfg/dbca.php';
 $cfgexists = "r501 appears to be installed already. Please delete the configuration file to continue.";

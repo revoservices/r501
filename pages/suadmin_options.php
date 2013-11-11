@@ -11,7 +11,7 @@ $options->close();
 if(isset($_POST['updateprefs'])) {
 print_r($_POST);
 }
-include('templates/form_site_options.php');
+include('templates/forms/site_options.php');
 ?>
 
 </div></div>
