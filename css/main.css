@@ -1,6 +1,5 @@
 body {
-background-color:#FFF;
-background-image:url('/img/bg2.png');
+background-color:#bcbcbc;
 }
 
 .dropdown-menu {
@@ -12,8 +11,8 @@ border-bottom-left-radius: 5px;
 margin-right:20px;*/
 padding-left:20px;
 padding-right:20px;
-background-color:#2f343a;/*#a6d5ff;*/
-color:#FFF;
+background-color:#a6d5ff; /*#2f343a;*/
+color:#000;
 position:fixed;
 padding-bottom:0px;
 bottom:0px;
@@ -22,8 +21,8 @@ width:100%;
 }
 
 .center-container {
-background-color:#e2e2e2;
-
+background-color:#fff;
+background-image:url('/img/bg2.png');
 margin-left:auto;
 margin-right:auto;
 height:100%;

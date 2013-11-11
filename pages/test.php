@@ -10,4 +10,5 @@ else {
 eval ($content['body']);
 }
 
+var_dump($content);
 ?>

@@ -1,3 +1,3 @@
 <?php
-include('templates/admin_dashboard.php');
+include('templates/blog_dashboard.php');
 ?>

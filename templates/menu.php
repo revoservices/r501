@@ -8,7 +8,7 @@
 
 include('inc/navbar_top.php');
 
-$toplvl = "SELECT * FROM `menus` WHERE `menu_vis` <= '$userlevel'";
+$toplvl = "SELECT * FROM `menus` WHERE `menu_vis` <= '$userlevel' AND `menu_enabled` = '1'";
 $toplevel = $mysqli->query($toplvl);
 
 foreach ($toplevel as $tl) {

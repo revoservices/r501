@@ -1,4 +1,4 @@
-<div class="col-6 col-lg-6">
+<div class="col-6 col-sm-6 col-lg-6">
 <?php
 //blogposts();
 //$bp = $p;
@@ -42,7 +42,7 @@
 </div>
 
 
-<div class="col-6 col-lg-6">
+<div class="col-6 col-sm-6 col-lg-6">
 <div class="panel" id="hubInfo"></div>
 <script>
 $("#hubInfo").hubInfo({ 
