@@ -23,7 +23,7 @@
 		echo "</a>";
 	}
 	function makelabel($type,$text) {
-		echo "<br><span class='label label-".$type."'>".$text."</span><br>";
+		echo "<p><span class='label label-".$type."'>".$text."</span></p>";
 	}
 	function inlinelabel($type,$text) {
 		echo "<span class='label label-".$type."'><h3>".$text."</h3></span>";

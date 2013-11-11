@@ -1,5 +1,13 @@
 <div class="container">
-<p class="lead">Checking Requirements</p>
+
+<div class="jumbotron">
+<h1>r501<small>Welcome to the installation wizard!</small></h1>
+<p>First we will do some basic checks to make sure your system meets the installation requirements.</p>
+<p>Next, enter your MySQL details. If you don't have these, contact your system administrator.</p>
+<p>Finally, define some options to set up your new site.</p>
+</div>
+<h3>Checking Requirements</h3>
+<hr>
 
 <?php
 //Required PHP version and success/error messages
@@ -63,7 +71,7 @@ else {
 } //End if $submit not set
 ?>
 </div>
-<hr>
+
 <?php
 
 if (isset($_POST['submit'])) {
@@ -74,6 +82,9 @@ $dbt = $_POST['dbname'];
 $admin = $_POST['admin'];
 $adminmail = $_POST['adminmail'];
 $adminpass = md5($_POST['adminpass']);
+$newsitename = $_POST['sitename'];
+$newtagline = $_POST['sitetag'];
+$newowner = $_POST['owner'];
 
 $installconn = new mysqli($dbs, $dbu, $dbp, $dbt);
 $dberr = $failglyph."Failed to connect to MySQL: (".$installconn->connect_errno.")".$installconn->connect_error;

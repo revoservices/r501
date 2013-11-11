@@ -287,6 +287,29 @@ else {
 
 }
 
+$populate_options = "INSERT INTO `site_options` (`optid`, `optname`, `optval`) VALUES
+(1, 'sitename', '$newsitename'),
+(2, 'sitetag', '$newtagline'),
+(3, 'siteowner', '$newowner'),
+(4, 'siteurl', 'http://iptv.revoservices.com'),
+(5, 'sitelogo', '/images/site/1/'),
+(6, 'maint_mode', '0'),
+(7, 'reg_open', '1'),
+(8, 'enable_login', '1'),
+(9, 'use_logo', '0'); ";
+$install = $installconn->query($populate_options);
+$name = "site options'";
+
+if(!$install) {
+	$crtfail = new alert("danger",$poperr.$name);
+	$crtfail->showalert();
+}
+else {
+	$crtpass = new alert("success",$poppass.$name);
+	$crtpass->showalert();
+	$dbmade = "1";
+
+}
 $dbcfile = 'cfg/dbc.php';
 $handle = fopen($dbcfile, 'w') or die('Cannot open file:  '.$dbcfile); //implicitly creates file
 $dbc_open = '<?php';

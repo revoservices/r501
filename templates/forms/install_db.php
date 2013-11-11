@@ -52,6 +52,8 @@ $dbase = new formGroup();
 		$dbase->placeholder = "Name of database";
 $dbase->renderGroup();
 
+echo "<h3>Site Configuration</h3>";
+echo "<hr>";
 $newadmin = new formGroup();
 		$newadmin->label = "Admin Username";
 		$newadmin->labelsize = "4";
@@ -84,6 +86,39 @@ $newadminpass = new formGroup();
 		$newadminpass->required = "1";
 		$newadminpass->placeholder = "Administrator Password";
 $newadminpass->renderGroup();
+
+$newsitename = new formGroup();
+		$newsitename->label = "Site Name";
+		$newsitename->labelsize = "4";
+		$newsitename->type = "text";
+		$newsitename->id = "sitename";
+		$newsitename->name = "sitename";
+		$newsitename->inputsize = "5";
+		$newsitename->required = "1";
+		$newsitename->placeholder = "Name of your new site";
+$newsitename->renderGroup();
+
+$newsitetag = new formGroup();
+		$newsitetag->label = "Site Tagline";
+		$newsitetag->labelsize = "4";
+		$newsitetag->type = "text";
+		$newsitetag->id = "sitetag";
+		$newsitetag->name = "sitetag";
+		$newsitetag->inputsize = "5";
+		$newsitetag->required = "1";
+		$newsitetag->placeholder = "A tagline for your site";
+$newsitetag->renderGroup();
+
+$newowner = new formGroup();
+		$newowner->label = "Site Owner";
+		$newowner->labelsize = "4";
+		$newowner->type = "text";
+		$newowner->id = "owner";
+		$newowner->name = "owner";
+		$newowner->inputsize = "5";
+		$newowner->required = "1";
+		$newowner->placeholder = "Your name or the name of your organization";
+$newowner->renderGroup();
 
 $submit = new formGroup();
 
