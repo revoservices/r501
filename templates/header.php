@@ -1,5 +1,9 @@
 <!doctype html>
 <?php
+/** Load configuration files
+* All of these files simply load other ones
+* Keeps this section clean and config files organized
+**/
 	require_once('cfg/dbc.php');
 	require_once('cfg/functions.php');
 	require_once('cfg/classes.php');

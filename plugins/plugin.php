@@ -1,3 +1,10 @@
 <?php
-//echo "hello";
+/** 
+* Plugin name:
+* Author:
+* Homepage:
+* Usage:
+*/
+
+
 ?>
