@@ -1,0 +1,25 @@
+Options +FollowSymLinks -Indexes
+RewriteEngine On
+RewriteRule ^page/([^/]*)/$ /index.php?view=$1
+RewriteRule ^page/([^/]*)/img/([^/]*)$ img/$2
+RewriteRule ^img/([^/]*)$ img/$1
+RewriteRule ^images/([^/]*)/([^/]*)/$ utilities/image.php?cat=$1&id=$2
+RewriteRule ^page/images/([^/]*)/([^/]*)/$ utilities/image.php?cat=$1&id=$2
+RewriteRule ^docs/([^/]*)/$ documentation/index.php?view=$1
+RewriteRule ^install/$ /install.php
+RewriteRule /js/(.*)$ js/$1
+RewriteRule /css/(.*)$ css/$1
+RewriteRule /fonts/(.*)$ fonts/$1
+RewriteRule /cfg/(.*)$ cfg/$1
+RewriteRule /cfg/lib/(.*)$ cfg/lib/$1
+RewriteRule /inc/(.*)$ inc/$1
+RewriteRule /uploads/(.*)$ uploads/$1
+RewriteRule /utilities/(.*)$ utilities/$1
+RewriteRule /plugins/([^/]*)/(.*)$ plugins/$1
+RewriteRule /templates/(.*)$ templates/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ %{REQUEST_URI}/ [R=301,L]
+
+ErrorDocument 403 /inc/403.php
+ErrorDocument 404 /index.php?view=404

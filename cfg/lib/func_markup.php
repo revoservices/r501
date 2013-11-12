@@ -13,6 +13,12 @@
 		echo $content;
 		echo "</a>";
 	}
+	function linkout($content,$url) {
+		global $siteurl;
+		echo "<a href='".$url."'>";
+		echo $content;
+		echo "</a>";
+	}
 	function startlink($address) {
 		global $siteurl;
 		echo "<a href='".$siteurl."/page/".$address."'>";

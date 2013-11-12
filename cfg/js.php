@@ -1,7 +1,7 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/holder.js"></script>
-<script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+
 <script type="text/javascript" src="js/jquery.video-ui.js"></script>
 <script type="text/javascript" src="js/hubinfo.min.js"></script>
 

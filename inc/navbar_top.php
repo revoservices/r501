@@ -9,7 +9,7 @@
       <span class="icon-bar"></span>
     </button>
 <div class="navbar-brand">
-	<?php makelink($sitelogo,$siteurl); ?>
+	<?php linkout($sitelogo,$siteurl); ?>
 </div>
 </div>
 
