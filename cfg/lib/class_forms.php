@@ -1,4 +1,8 @@
 <?php
+/**
+* Basic form functions
+* Package: formWrapper
+**/
 class Form {
 	var $style;
 	var $action;
@@ -11,7 +15,8 @@ class Form {
 		$action = null,
 		$method = null,
 		$legend = null,
-		$inputs = null) {
+		$inputs = null) 
+	{
 		$this->style = $style;
 		$this->action = $action;
 		$this->method = $method;
@@ -19,25 +24,58 @@ class Form {
 		$this->inputs = $inputs;
 	}
 
-	function render() {
+	function render() 
+	{
 		$output = "<form class='".$this->style."' action='".$this->action."' method='".$this->method."'>";
-		foreach ($this->inputs as $input) {
+		foreach ($this->inputs as $input) 
+		{
 			$output .= $input->render();
 		}
 		$output .= "</form>";
 		return output;
 	}
-	function start() {
+	
+	/**
+	* Echo markup to start form
+	* Usage: 
+	* formName = new Form();
+	* formName->style = "chosen_form_class" (horizontal, inline, etc.)
+	* formName->method = "form_method" ($_POST, $_GET, etc.)
+	* formName->action = "processor_page"
+	* formname->legend = "form_title" (displayed with <h2> and an <hr>)
+	* formName->start()
+	**/	
+	function start() 
+	{
 		$output = "<form class='".$this->style."' action='".$this->action."' method='".$this->method."'>";
-		$output .= "<legend>".$this->legend."</legend>";
+		if (isset($this->legend)) 
+		{
+			$output .= "<legend>".$this->legend."</legend>";
+		}		
 		echo $output;
 	}
-	function end() {
+
+	/**
+	* Echo markup to start form
+	* formName must match name defined with formname->start()
+	* Usage: formName->end()
+	**/
+	function end() 
+	{
 		$formend = "</form>";
 		echo $formend;
 	}
 }
 
+/**
+* Create the input groups
+* Usage:
+* $new_group = new Formgroup();
+* $new_group->label = "label_text";
+* $new_group->labelsize = "4";
+* $new_group->autocomplete = "on"/"off"
+* $new_group->renderGroup();
+**/
 class Formgroup {
 	var $label;
 	var $labelsize;
@@ -55,7 +93,8 @@ class Formgroup {
 	var $text;
 	var $helpblock;
 	
-	/** Most properties are optional.
+	/**
+	* Most properties are optional.
 	* $this->type is required so it can render correctly
 	**/
 	function __construct($label = null, 
@@ -72,7 +111,8 @@ class Formgroup {
  		$checked = null, 
  		$action = null, 
  		$text = null,
-		$helpblock = null) {
+		$helpblock = null) 
+	{
 		$this->label = $label;
 		$this->labelsize = $labelsize;
 		$this->type = $type;
@@ -89,6 +129,13 @@ class Formgroup {
 		$this->text = $text;
 		$this->helpblock = $helpblock;
 	}
+
+	/**
+	* Render form group
+	*
+	* Package: formWrapper	
+	* 
+	*/
 	function renderGroup() {
 		if (!isset($this->labelsize)) {
 			$this->labelsize = "4";

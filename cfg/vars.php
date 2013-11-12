@@ -1,7 +1,7 @@
 <?php
 
 $options = $mysqli->query("SELECT 
- *
+ `site_options`.*
  FROM `site_options`");
 	while ($option = $options->fetch_assoc())
 	{
@@ -14,9 +14,8 @@ $sitename = $opt['sitename'];
 $sitetag = $opt['sitetag'];
 $siteowner = $opt['siteowner'];
 $siteurl = $opt['siteurl'];
-//$sitelogofile = $opt['sitelogo'];
-//$sitelogo = "<img src='".$sitelogofile."'>";
-$sitelogo = "<img src='/images/site/1/'>";
+$sitelogofile = $opt['sitelogo'];
+$sitelogo = "<img src='".$sitelogofile."'>";
 $sitetitle = $sitename." - ".$sitetag;
 $displaylogo = $opt['use_logo'];
 

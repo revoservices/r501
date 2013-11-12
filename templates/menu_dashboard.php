@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 	<div class="row">
 		<div class="col-md-12">
     		  <h1>Navigation
@@ -12,4 +12,9 @@
 		</div>
 	</div>
 </div>
-<hr>
+<hr> -->
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#mainmenus" data-toggle="tab">Main Menus</a></li>
+  <li><a href="#items" data-toggle="tab">Menu Items</a></li>
+
+</ul><hr>
