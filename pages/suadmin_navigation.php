@@ -1,4 +1,5 @@
 <?php
+issudo();
 include('templates/menu_dashboard.php');
 
 echo "<div class='tab-content'><div class='tab-pane active' id='mainmenus'>";

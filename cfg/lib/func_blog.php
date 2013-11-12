@@ -1,9 +1,12 @@
 <?php
-/** Pull Blog Posts
-*
-* Array of posts
-*
-*/
+/** 
+* Pull Blog Posts
+* Usage:
+* $foo = blogposts();
+* foreach ($foo as $bar) 
+* $title = $bar['post_title']
+* echo $title
+**/
 function blogposts() 
 {
 	global $userlevel, $mysqli;

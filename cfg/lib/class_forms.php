@@ -2,6 +2,7 @@
 /**
 * Basic form functions
 * Package: formWrapper
+* TODO: Radio, Selectbox, Combobox
 **/
 class Form {
 	var $style;
@@ -24,9 +25,10 @@ class Form {
 		$this->inputs = $inputs;
 	}
 
+	// !!!!DEPRECIATED!!!!
 	function render() 
 	{
-		$output = "<form class='".$this->style."' action='".$this->action."' method='".$this->method."'>";
+		$output = "<form class='form ".$this->style."' action='".$this->action."' method='".$this->method."'>";
 		foreach ($this->inputs as $input) 
 		{
 			$output .= $input->render();
@@ -94,12 +96,13 @@ class Formgroup {
 	var $helpblock;
 	
 	/**
-	* Most properties are optional.
+	* Many properties are optional or type-specific.
+	* (i.e. checked, placeholder, action
 	* $this->type is required so it can render correctly
 	**/
 	function __construct($label = null, 
  		$labelsize = null, 
- 		$type = null, 
+ 		$type = null, // text, checkbox, textarea, button, password, file
  		$style = null, 
  		$id = null, 
  		$name = null, 
@@ -109,7 +112,7 @@ class Formgroup {
  		$placeholder = null,
 		$autocomplete = null, 
  		$checked = null, 
- 		$action = null, 
+ 		$action = null,  // only for buttons
  		$text = null,
 		$helpblock = null) 
 	{
@@ -137,16 +140,27 @@ class Formgroup {
 	* 
 	*/
 	function renderGroup() {
-		if (!isset($this->labelsize)) {
+		// Set some default parameters
+		if (!isset($this->type)) 
+		{
+			$this->type = "text";
+		}
+		if (!isset($this->labelsize)) 
+		{
 			$this->labelsize = "4";
 		}
-		if (!isset($this->inputsize)) {
+		if (!isset($this->inputsize)) 
+		{
 			$this->inputsize = "5";
 		}
-		if (!isset($this->label)) {
+		if (!isset($this->label)) 
+		{
 			$this->label = "";
 		}
+
+		// Default way to start an input, used for most except textarea
 		$inputdefault = "<input id='".$this->id."' name='".$this->name."' type='".$this->type."'";
+		//Start rendering the group, starting with the label
 		echo "<div class='form-group'>";
  		echo "<label class='col-md-".$this->labelsize." control-label' for='".$this->name."'>";
 		echo $this->label."</label>";  
@@ -164,6 +178,7 @@ class Formgroup {
 				}
 				$input .= " placeholder='".$this->placeholder."' value='".$this->value."' class='form-control input-md'>";
 				break;
+
 			case "password":
 				$input  = $inputdefault;
 				if ($this->required == "1") {
@@ -174,6 +189,7 @@ class Formgroup {
 				}
 				$input .= " placeholder='".$this->placeholder."' value='".$this->value."' class='form-control input-md'>";
 				break;
+
 			case "checkbox":
 				$input = "<label class='checkbox'>";
 				$input  .= $inputdefault;
@@ -184,16 +200,25 @@ class Formgroup {
 				$input .= "</label>";
 				
 			break;
+
 			case "file":
 				$input = $inputdefault;
 				$input .= "class='file-input'>";
 			break;
+
+			case "textarea":
+				$input = "<textarea class='form-control' id='".$this->id."' name='".$this->name."'>";
+				$input .= $this->value;
+				$input .= "</textarea>";
+			break;
+
 			case "button":
 				$input = "<button type='".$this->action."' name='".$this->name."'";
 				$input .= " value='".$this->value."' class='btn btn-".$this->style."'>";
 				$input .= $this->text."</button>";
 				break;
-		}
+		} // End input type switch
+
 		print $input; //render the input
 		if (isset($this->helpblock)) {
 			$hb = "<span class='help-block'>".$this->helpblock."</span>";

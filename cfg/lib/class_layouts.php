@@ -81,7 +81,17 @@ class halfPage extends Layout
 		switch ($this->type)
 		{
 			case "file":
-			include('pages/'.$this->pgname.'.php');
+				include('pages/'.$this->pgname.'.php');
+			break;
+			case "sql":
+				$query = "SELECT * FROM `content` WHERE `content`.`name` = '$this->pgname'";
+				$getpage = $mysqli->query($query);
+				while ($data = $getpage->fetch_assoc())
+				{
+					$cont = $data['content'];
+					echo "<h2>".$data['title']."</h2>";
+					eval( $cont );
+				}
 			break;
 		}
 		echo "</div>";

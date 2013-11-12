@@ -1,6 +1,7 @@
 <div class="panel">
 <div class="panel-body">
 <?php 
+issudo();
 /*
 $options = $mysqli->query("SELECT * FROM `site_options`");
 while ($option = $options->fetch_assoc()) {

@@ -1,11 +1,6 @@
 
 <?php
-/*
-$formAction = "../suadmin_options/";
-$formMethod = "POST";
-$formLegend = "Site Configuration";
-beginForm($formAction,$formMethod,$formLegend);
-*/
+
 $siteconfig = new Form();
 	$siteconfig->action = "../suadmin_options/";
 	$siteconfig->method = "POST";
@@ -167,7 +162,7 @@ $submit = new formGroup();
 $submit->renderGroup();
 
 $siteconfig->end();
-//endForm();
+
 ?>
 
 

@@ -10,7 +10,7 @@ $hp->pgname = $page1;
 $hp->render();
 
 $hp2 = new halfPage();
-$hp2->type = "file";
+$hp2->type = "sql";
 $hp2->pgname = $page2;
 $hp2->render();
 ?>
