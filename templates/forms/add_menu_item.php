@@ -1,4 +1,4 @@
-<form class="form-horizontal">
+<form class="form-horizontal" method='post' action='../suadmin_navigation/'>
 <fieldset>
 
 <!-- Form Name -->
@@ -11,9 +11,9 @@
     <select id="parent" name="parent" class="form-control">
       <option value="1">Main</option>
       <option value="2">Users</option>
-      <option value="3">User Options</option>
-      <option value="4">Admin</option>
-      <option value="5">Super Admin</option>
+      <option value="5">User Options</option>
+      <option value="3">Admin</option>
+      <option value="4">Super Admin</option>
     </select>
   </div>
 </div>
@@ -44,6 +44,24 @@
   <label class="col-4 col-md-4 col-lg-4 control-label" for="destination">Destination</label>  
   <div class="col-8 col-md-8 col-lg-8">
   <input id="destination" name="destination" type="text" placeholder="Page to link to" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-4 col-md-4 col-lg-4 control-label" for="destination">Order</label>  
+  <div class="col-8 col-md-8 col-lg-8">
+  <input id="order" name="order" type="text" placeholder="Display order" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-4 col-md-4 col-lg-4 control-label" for="destination">Glyphicon</label>  
+  <div class="col-8 col-md-8 col-lg-8">
+  <input id="glyph" name="glyph" type="text" placeholder="Glyph" class="form-control input-md">
     
   </div>
 </div>

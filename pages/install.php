@@ -6,6 +6,7 @@
 <p>Next, enter your MySQL details. If you don't have these, contact your system administrator.</p>
 <p>Finally, define some options to set up your new site.</p>
 </div>
+
 <h3>Checking Requirements</h3>
 <hr>
 

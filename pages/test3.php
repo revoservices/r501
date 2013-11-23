@@ -11,6 +11,9 @@ $hp->render();
 
 $hp2 = new halfPage();
 $hp2->type = "sql";
+$hp2->title = "About Page";
+$hp2->showtitle = "1";
 $hp2->pgname = $page2;
 $hp2->render();
 ?>
+

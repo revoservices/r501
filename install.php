@@ -16,7 +16,9 @@ if (file_exists($cfgfile)) {
 	$cfgex->showalert();
  
 } else {
+	echo "<div class='well'>";
 	include('pages/install.php');
+	echo "</div>";
 }
 
 ?>

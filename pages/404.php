@@ -1,7 +1,19 @@
 <div class="panel">
-<div class="panel-heading">
-<h3 class="panel-title">
-Not Found!</h3></div>
-<div class="panel-body">
-Sorry, we couldn't find that content.</div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>
+                    Oops!</h1>
+                <h2>
+                    404 Not Found</h2>
+                <div class="error-details">
+                    Sorry, an error has occured, Requested page not found!
+                </div>
+                <div class="error-actions">
+                    <a href="<?php echo $siteurl; ?>" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
+                        Take Me Home </a><a href="<?php echo $siteurl; ?>" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Contact Support </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

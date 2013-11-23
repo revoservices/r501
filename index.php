@@ -20,7 +20,23 @@ if (!empty($_GET['view'])) {
 
 // Include $action 
 
-include("pages/$action.php"); 
+//include("pages/$action.php"); 
+if(!$getpage = $mysqli->query("SELECT * FROM `pages` WHERE '$action' = `pageurl`"))
+{
+	echo "hello";
+	include("pages/404.php");
+}
+else
+{
+$makepage = $getpage->fetch_assoc();
 
+	if ($makepage['showname'] == "1")
+		{
+			echo "<h2>".$makepage['pagename']."</h2>";
+		}	
+	eval( $makepage['pagecontent'] );
+
+}
+// Include Footer
 include("templates/footer.php");
 ?>

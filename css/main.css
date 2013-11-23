@@ -28,6 +28,7 @@ margin-right:auto;
 height:100%;
 position:relative;
 width:100%;
+bottom:0px;
 padding-top:20px;
 padding-bottom:35px;
 }
@@ -58,3 +59,19 @@ padding-bottom:35px;
 .navbar-static-top {
   margin-bottom:0px;
 }
+
+.table {
+background: #FFF;
+}
+
+.nav-tabs {
+background: #FFF;
+}
+
+form {
+background: #FFF;
+}
+
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }

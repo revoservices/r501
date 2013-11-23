@@ -1,0 +1,7 @@
+<plugin>
+	<name>Canvass Tracker</name>
+	<author>RevoServices</author>
+	<version>1.0</version>
+	<homepage>http://revoservices.com</homepage>
+	<description>Track knocks per hour, etc</description>
+</plugin>

@@ -13,8 +13,8 @@
 	</div>
 </div>
 <hr> -->
-<ul class="nav nav-tabs" id="myTab">
-  <li class="active"><a href="#mainmenus" data-toggle="tab">Main Menus</a></li>
-  <li><a href="#items" data-toggle="tab">Menu Items</a></li>
+<ul class="nav nav-tabs" id="menucfgtabs">
+  <li class="active"><a href="#items" data-toggle="tab">Menu Items</a></li>
+  <li><a href="#mainmenus" data-toggle="tab">Parent Menus</a></li>
 
-</ul><hr>
+</ul>
