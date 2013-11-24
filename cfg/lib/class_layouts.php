@@ -36,7 +36,7 @@ class quarterPage extends Layout
 			echo "<div class='row'>";
 		}
 		
-		echo "<div class='col-3 col-lg-3'>";
+		echo "<div class='col-3 col-md-3 col-lg-3'>";
 		if ($this->showtitle == "1") 
 		{
 			echo "<legend>".$this->title."</legend>";
@@ -79,7 +79,7 @@ class thirdPage extends Layout
 		{
 			echo "<div class='row'>";
 		}
-		echo "<div class='col-4 col-lg-4'>";
+		echo "<div class='col-4 col-md-4 col-lg-4'>";
 		if ($this->showtitle == "1") 
 		{
 			echo "<legend>".$this->title."</legend>";
@@ -122,7 +122,7 @@ class halfPage extends Layout
 		{
 			echo "<div class='row'>";
 		}
-		echo "<div class='col-6 col-lg-6'>";
+		echo "<div class='col-6 col-md-6 col-lg-6'>";
 		if ($this->showtitle == "1") 
 		{
 			echo "<legend>".$this->title."</legend>";
@@ -165,7 +165,7 @@ class twoThirds extends Layout
 		{
 			echo "<div class='row'>";
 		}
-		echo "<div class='col-9 col-lg-9'>";
+		echo "<div class='col-9 col-md-9 col-lg-9'>";
 		if ($this->showtitle == "1") 
 		{
 			echo "<legend>".$this->title."</legend>";
@@ -208,7 +208,7 @@ class fullPage extends Layout
 		{
 			echo "<div class='row'>";
 		}
-		echo "<div class='col-12 col-lg-12'>";
+		echo "<div class='col-12 col-md-12 col-lg-12'>";
 		if ($this->showtitle == "1") 
 		{
 			echo "<legend>".$this->title."</legend>";

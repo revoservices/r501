@@ -27,7 +27,11 @@
 		var $footer;
 		var $size;
 		var $style;
-			function __construct($size,$style,$title,$body,$footer) {
+			function __construct($size = null,
+				$style = null,
+				$title = null,
+				$body = null,
+				$footer = null) {
 				$this->size = $size;
 				$this->style = $style;
 				$this->title = $title;
@@ -35,7 +39,7 @@
 				$this->footer = $footer;
 			}
 			function showpanel() {
-				echo "<div class='col-lg-".$this->size." col-".$this->size."'>";
+				echo "<div class='col-sm-".$this->size." col-md-".$this->size." col-lg-".$this->size." col-".$this->size."'>";
 				echo "<div class='panel panel-".$this->style."'>";
 				echo "<div class='panel-heading'>";
 				echo "<h3 class='panel-title'>".$this->title."</h3></div>";
@@ -91,7 +95,7 @@ class altpanel {
 			$this->footer = $pfooter;
 		}
 		function makepanel() {
-			echo "<div class='col-lg-".$this->size." col-".$this->size."'>";
+			echo "<div class='col-sm-".$this->size." col-md-".$this->size." col-lg-".$this->size." col-".$this->size."'>";
 			echo "<div class='panel panel-".$this->type."'>";
 			if (isset($this->title)) {
 				echo "<div class='panel-heading'>";
